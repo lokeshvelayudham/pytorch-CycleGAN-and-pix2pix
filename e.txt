@@ -1,0 +1,10 @@
+python train.py `
+  --dataroot .\datasets\cryoviz_AB `
+  --name cryo_pix2pix_128 `
+  --model pix2pix --dataset_mode aligned `
+  --direction AtoB --netG unet_128 --gan_mode lsgan `
+  --input_nc 3 --output_nc 3 `
+  --preprocess none --batch_size 8 `
+  --n_epochs 100 --n_epochs_decay 100 `
+  --lambda_L1 200 --ndf 32 --lr 1e-4 `
+  --num_threads 0
